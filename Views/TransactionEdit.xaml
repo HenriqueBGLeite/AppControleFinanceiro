@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppControleFinanceiro.Views.TransactionEdit"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="TransactionEdit">
+    <Grid
+        Padding="20"
+        ColumnDefinitions="*, *"
+        RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto"
+        RowSpacing="10">
+        <Border
+            Grid.ColumnSpan="2"
+            BackgroundColor="{AppThemeBinding Light=Black,
+                                              Dark=White}"
+            HeightRequest="57"
+            Stroke="Transparent"
+            StrokeShape="RoundRectangle 30">
+            <Grid>
+                <Label
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="Atualizar"
+                    TextColor="{AppThemeBinding Light=White,
+                                                Dark=Black}"
+                    VerticalOptions="Center" />
+                <Image
+                    Margin="0,0,23,0"
+                    HorizontalOptions="End"
+                    Source="{AppThemeBinding Light='close.png',
+                                             Dark='close_dark.png'}"
+                    VerticalOptions="Center"
+                    WidthRequest="17">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnClosedTransactionEdit" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </Border>
+
+        <RadioButton
+            Grid.Row="1"
+            Content="Receitas"
+            HorizontalOptions="Start" />
+        <RadioButton
+            Grid.Row="1"
+            Grid.Column="1"
+            Content="Despesas"
+            HorizontalOptions="End" />
+
+        <Entry
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            Placeholder="Nome" />
+        <DatePicker Grid.Row="3" Grid.ColumnSpan="2" />
+        <Entry
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            Placeholder="Valor" />
+
+        <Button
+            Grid.Row="5"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Center"
+            Text="Salvar" />
+    </Grid>
+</ContentPage>

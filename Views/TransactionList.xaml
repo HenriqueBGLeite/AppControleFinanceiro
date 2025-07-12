@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppControleFinanceiro.Views.TransactionList"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label
+            HorizontalOptions="Center"
+            Text="Transaction List"
+            VerticalOptions="Center" />
+
+        <Button
+            Clicked="OnButtonClicked_To_TransactionAdd"
+            CornerRadius="25"
+            FontAttributes="Bold"
+            Text="Adicionar" />
+        <Button
+            Clicked="OnButtonClicked_To_TransactionEdit"
+            CornerRadius="25"
+            FontAttributes="Bold"
+            Text="Edição" />
+    </VerticalStackLayout>
+</ContentPage>
