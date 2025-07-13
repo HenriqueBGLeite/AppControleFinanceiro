@@ -1,6 +1,8 @@
+using AppControleFinanceiro.Libraries.Utils.FixBugs;
 using AppControleFinanceiro.Models;
 using AppControleFinanceiro.Repositories;
 using CommunityToolkit.Mvvm.Messaging;
+using Microsoft.Maui.Platform;
 using System.Text;
 
 namespace AppControleFinanceiro.Views;
@@ -32,6 +34,7 @@ public partial class TransactionEdit : ContentPage
 
     private void OnClosedTransactionEdit(object sender, TappedEventArgs e)
     {
+        KeyboardFixBugs.HideKeyboard();
         Navigation.PopModalAsync();
     }
 
@@ -41,6 +44,8 @@ public partial class TransactionEdit : ContentPage
             return;
 
         EditTransactionInDatabase();
+
+        KeyboardFixBugs.HideKeyboard();
 
         Navigation.PopModalAsync();
 
@@ -55,7 +60,7 @@ public partial class TransactionEdit : ContentPage
             Name = EntryName.Text,
             Type = RadioIncome.IsChecked ? TransactionType.Income : TransactionType.Expenses,
             Date = DatePickerDate.Date,
-            Value = double.Parse(EntryValue.Text),
+            Value = Math.Abs(double.Parse(EntryValue.Text)),
         };
 
         _repository.Update(transaction);

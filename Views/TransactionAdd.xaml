@@ -59,7 +59,8 @@
         <DatePicker
             x:Name="DatePickerDate"
             Grid.Row="3"
-            Grid.ColumnSpan="2" />
+            Grid.ColumnSpan="2"
+            Margin="{OnPlatform MacCatalyst='15,15,15,0'}" />
         <Entry
             x:Name="EntryValue"
             Grid.Row="4"
