@@ -11,7 +11,8 @@ namespace AppControleFinanceiro
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new NavigationPage(new TransactionList()));
+            var listPage = this.Handler.MauiContext.Services.GetService<TransactionList>();
+            return new Window(new NavigationPage(listPage));
         }
     }
 }

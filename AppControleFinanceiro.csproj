@@ -61,21 +61,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <AndroidResource Remove="NovaPasta\**" />
 	  <AndroidResource Remove="ViewModels\**" />
-	  <Compile Remove="NovaPasta\**" />
 	  <Compile Remove="ViewModels\**" />
-	  <EmbeddedResource Remove="NovaPasta\**" />
 	  <EmbeddedResource Remove="ViewModels\**" />
-	  <MauiCss Remove="NovaPasta\**" />
 	  <MauiCss Remove="ViewModels\**" />
-	  <MauiXaml Remove="NovaPasta\**" />
 	  <MauiXaml Remove="ViewModels\**" />
-	  <None Remove="NovaPasta\**" />
 	  <None Remove="ViewModels\**" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
 		<PackageReference Include="LiteDB" Version="5.0.21" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.82" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.7" />

@@ -7,7 +7,7 @@
     <Grid
         Padding="20"
         ColumnDefinitions="*, *"
-        RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto"
+        RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto"
         RowSpacing="10">
         <Border
             Grid.ColumnSpan="2"
@@ -39,28 +39,44 @@
         </Border>
 
         <RadioButton
+            x:Name="RadioIncome"
             Grid.Row="1"
             Content="Receitas"
-            HorizontalOptions="Start" />
+            HorizontalOptions="Start"
+            IsChecked="True" />
         <RadioButton
+            x:Name="RadioExpense"
             Grid.Row="1"
             Grid.Column="1"
             Content="Despesas"
             HorizontalOptions="End" />
 
         <Entry
+            x:Name="EntryName"
             Grid.Row="2"
             Grid.ColumnSpan="2"
             Placeholder="Nome" />
-        <DatePicker Grid.Row="3" Grid.ColumnSpan="2" />
+        <DatePicker
+            x:Name="DatePickerDate"
+            Grid.Row="3"
+            Grid.ColumnSpan="2" />
         <Entry
+            x:Name="EntryValue"
             Grid.Row="4"
             Grid.ColumnSpan="2"
             Placeholder="Valor" />
 
-        <Button
+        <Label
+            x:Name="LabelError"
             Grid.Row="5"
             Grid.ColumnSpan="2"
+            IsVisible="False"
+            TextColor="Red" />
+
+        <Button
+            Grid.Row="6"
+            Grid.ColumnSpan="2"
+            Clicked="OnButtonClicked_Save"
             HorizontalOptions="Center"
             Text="Salvar" />
     </Grid>

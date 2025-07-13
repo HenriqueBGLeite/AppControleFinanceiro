@@ -111,7 +111,7 @@
     </Style>
 
     <Style TargetType="Entry">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />
@@ -423,7 +423,7 @@
             <Setter.Value>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Offset="0.0" Color="#F3F4F1" />
-                    <GradientStop Offset="1.0" Color="#878787" />
+                    <GradientStop Offset="1.0" Color="#D7D8D5" />
                 </LinearGradientBrush>
             </Setter.Value>
         </Setter>
